@@ -1,0 +1,52 @@
+/* .btn_btn {
+    width: 300px;
+    height: 100px;
+    /* border-radius: 50%; 
+clip-path: ellipse(50% 50% at 50% 50%);
+padding: 10px;
+border: none;
+background-color: #2ca9f4;
+color: black;
+font-size: 18px;
+margin: 5px;
+
+}
+
+*/
+.btn {
+    height: 30vw;
+    width: 30vw;
+    object-fit: cover;
+}
+
+.Swiper {
+    cursor: grab;
+}
+
+.Swiper::before,
+.Swiper::after {
+    z-index: 2;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    width: 800vw;
+    height: 800vw;
+    background: #eaedf0;
+    border-radius: 50%;
+}
+
+.Swiper::before {
+    top: -795vw;
+}
+
+.Swiper::after {
+    bottom: -795vw;
+}
+
+.item_span {
+    width: 200px;
+    height: 400px;
+    border-radius: 50%;
+}
