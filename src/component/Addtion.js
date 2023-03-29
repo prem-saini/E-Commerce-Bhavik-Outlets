@@ -8,9 +8,9 @@ import TreadingProduct from "./TreadingProduct"
 function Addtion() {
     return (
         <>
-            <div className="container-fluid mt-5 bg-white">
+            <div className="container-fluid mt-5">
 
-                <div className=" container d-flex justify-content-between align-items-center flex-wrap">
+                <div className=" container d-flex justify-content-between align-items-center flex-wrap responsive">
                     {
                         Data.map((item) => {
                             return (
@@ -19,9 +19,9 @@ function Addtion() {
                                         <div className="cart_func">
                                             <img src={item.imgdata} alt="..." className="mt-3" />
                                         </div>
-                                        <div className="">
-                                            <p className="fs-5 mt-3 fw-semibold">{item.title}</p>
-                                            <p className="fs-6 fw-semibold">{item.product}</p>
+                                        <div className="text-center">
+                                            <p className="data_title">{item.title}</p>
+                                            <p className="data_product">{item.product}</p>
                                         </div>
                                     </div>
                                 </>
@@ -34,8 +34,8 @@ function Addtion() {
 
 
             <TreadingProduct />
-            <div className="container-fluid bg-light">
-                <div className="container mt-5 d-flex bg-light flex-wrap">
+            <div className="container-fluid bg-light ">
+                <div className="container mt-5 d-flex bg-light flex-wrap ">
                     <div className="col-lg-8 main_cartdiv col-12">
                         <img src={banner1} alt="..." className="img_responsive" />
                         <div className="mx-3 itemcart_text">
@@ -54,35 +54,35 @@ function Addtion() {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid mt-4 bg-light">
-                <div className="container  d-flex justify-content-between flex-wrap p-2">
+            <div className="container-fluid mt-4 bg-light ">
+                <div className="container  d-flex justify-content-between flex-wrap p-2 responsive">
                     <div className="d-flex flex-column bg-white p-3  box_responsive">
                         <div className="">
                             <img src="https://img.icons8.com/ios/50/null/free-shipping.png" alt="..." />
                         </div>
-                        <span className="fs-5 fw-bolder">Free Delivary</span>
-                        <sapn className="fs-6 fw-bolder">Orders from all Items</sapn>
+                        <span className="data_text">Free Delivary</span>
+                        <sapn className="data_item">Orders from all Items</sapn>
                     </div>
                     <div className="d-flex flex-column bg-white p-3  box_responsive">
                         <div className="">
                             <img src="https://img.icons8.com/ios/50/null/refund-2.png" alt="..." />
                         </div>
-                        <span className="fs-5 fw-bolder">Return & Refund</span>
-                        <sapn className="fs-6 fw-bolder">Money Back Garntee</sapn>
+                        <span className="data_text">Return & Refund</span>
+                        <sapn className="data_item">Money Back Garntee</sapn>
                     </div>
                     <div className="d-flex flex-column bg-white p-3  box_responsive">
                         <div className="">
                             <img src="https://img.icons8.com/ios/50/null/discount--v1.png" alt="..." />
                         </div>
-                        <span className="fs-5 fw-bolder">Member Discount</span>
-                        <sapn className="fs-6 fw-bolder">on every Order $10.00</sapn>
+                        <span className="data_text">Member Discount</span>
+                        <sapn className="data_item">on every Order $10.00</sapn>
                     </div>
                     <div className=" d-flex flex-column bg-white p-3  box_responsive">
                         <div className="">
                             <img src="https://img.icons8.com/ios/50/null/clock--v1.png" alt="..." />
                         </div>
-                        <span className="fs-5 fw-bolder">Support 24/7</span>
-                        <sapn className="fs-6 fw-bolder">Contatus Us 24 hoursa day</sapn>
+                        <span className="data_text">Support 24/7</span>
+                        <sapn className="data_item">Contatus Us 24 hoursa day</sapn>
                     </div>
                 </div>
             </div>

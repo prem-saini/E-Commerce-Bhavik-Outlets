@@ -32,7 +32,6 @@ function AllProduct() {
     }, [])
     return (
         <>
-            <Header />
             <div className="mx-3">
                 <p className="product_heading">ALL PRODUCTS</p>
             </div>
@@ -53,7 +52,7 @@ function AllProduct() {
                                             <p className="card-text">Price:{value?.price}</p>
                                         </div>
 
-                                        <button className="btn btn-success" onClick={() => senddata(value)}>ADD ITEM</button>
+                                        <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
                                     </div>
                                 </div>
 

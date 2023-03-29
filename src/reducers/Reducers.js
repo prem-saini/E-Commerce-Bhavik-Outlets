@@ -1,8 +1,8 @@
-import { ADD_CART } from "../constant/Constant";
+import { ADD_CART, REMOVE_ALL, REMOVE_SINGLE } from "../constant/Constant";
 const INIT_STATE = {
     carts: []
 };
-console.log(INIT_STATE.carts, "sa")
+// console.log(INIT_STATE.carts, "sa")
 export const cartreducer = (state = INIT_STATE, action) => {
     switch (action.type) {
         case ADD_CART:
@@ -24,7 +24,7 @@ export const cartreducer = (state = INIT_STATE, action) => {
 
             }
 
-        case 'REV_CART':
+        case REMOVE_ALL:
             const data = state.carts.filter((el) => el.id !== action.payload)
             return {
                 ...state,
@@ -32,7 +32,7 @@ export const cartreducer = (state = INIT_STATE, action) => {
 
             }
 
-        case "RMV_ONE":
+        case REMOVE_SINGLE:
             const IteamIndex_dec = state.carts.findIndex((iteam) => iteam.id === action.payload.id);
 
             if (state.carts[IteamIndex_dec].qnty >= 1) {

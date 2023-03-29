@@ -1,4 +1,50 @@
 .footer {
     background-color: #CAD4DB;
+    height: 50vh;
+    padding: 50px;
+
+}
+
+.footer_logo {
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_dec {
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_heading {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_contact {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width:767px) {
+    .footer {
+        background-color: #CAD4DB;
+        height: 100vh;
+        padding: 10px;
+    }
 
 }

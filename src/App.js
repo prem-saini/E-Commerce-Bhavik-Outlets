@@ -1,4 +1,3 @@
-
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './auth/Login';
@@ -9,11 +8,13 @@ import CategoriesItempage from './component/CategoriesItempage';
 import Singlepage from './component/Singlepage';
 import AddToCart from './component/AddToCart';
 import Footer from './component/Footer';
+import Header from './component/Navbar';
 
 function App() {
   return (
 
     <>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />

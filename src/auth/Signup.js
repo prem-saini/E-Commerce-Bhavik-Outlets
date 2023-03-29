@@ -24,9 +24,10 @@ function Signup() {
             }
         })
     };
+
     return (
         <>
-            <Header />
+
             <section>
                 <div className="form_data">
                     <div className="form_heading">
@@ -57,7 +58,7 @@ function Signup() {
                             </div>
                         </div>
 
-                        <button className='btn' >Sign Up</button>
+                        <button className='btn_login' >Sign Up</button>
                         <p>Don't have an Account?<Link to='/login'> Login </Link> </p>
 
                     </form>

@@ -8,14 +8,14 @@ export const ADD = (item) => {
 
 export const DLT = (id) => {
     return {
-        type: "REV_CART",
+        type: "REMOVE_ALL",
         payload: id
     }
 }
 
 export const REMOVE = (item) => {
     return {
-        type: "REV_ONE",
+        type: "REMOVE_SINGLE",
         payload: item
     }
 }

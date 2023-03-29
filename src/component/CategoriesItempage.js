@@ -1,21 +1,18 @@
 import React, { useState } from "react"
 import { useLocation } from "react-router-dom";
-import Header from "./Navbar";
 import { Link } from "react-router-dom";
 
 function CategoriesItempage(props) {
     const location = useLocation();
     const [star, setStar] = useState(location.state?.data)
-
-    console.log(location.state?.data, "props")
+    // console.log(location.state?.data, "props")
     // console.log(stat, "love")
 
     return (
-        <> <Header />
+        <>
             <div className="d-flex justify-content-between flex-wrap p-2">
                 {star &&
                     star?.map((value) => {
-
                         return (
                             <>
                                 <div className="Card_main">

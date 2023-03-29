@@ -4,22 +4,17 @@ import Treading from "../Treading"
 function TreadingProduct() {
     return (
         <>
-            <div className="d-flex justify-content-between align-items-center mt-3 flex-wrap container">
-                <div>
-                    <span className="fs-2 fw-lighter">Trending Products</span>
-
-                </div>
-                <div>
-                    <hr className="hr" />
-                </div>
+            <div className="d-flex justify-content-between align-items-center mt-3 flex-wrap container responsive">
+                <span className="Trending_heading">Trending Products</span>
+                <hr className="hr" />
                 <div className="d-flex">
-                    <p className="mx-3 fs-5 fw-bolder text-warning">New</p>
-                    <p className="mx-3 fs-5 fw-lighter text-secondary">Featured</p>
-                    <p className="mx-3 fs-5 fw-lighter text-secondary">Top Sellers</p>
+                    <p className="trending_text text-warning">New</p>
+                    <p className="trending_text text-secondary">Featured</p>
+                    <p className="trending_text text-secondary">Top Sellers</p>
                 </div>
             </div>
             <div className="container-fluid bg-light ">
-                <div className="container d-flex justify-content-between flex-wrap mt-3 ">
+                <div className="container d-flex justify-content-between flex-wrap mt-3 responsive">
                     {
                         Treading.map((element) => {
                             return (

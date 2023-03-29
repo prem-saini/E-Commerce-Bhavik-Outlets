@@ -9,13 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: auto;
     padding: 10px;
-}
-
-body {
-    background-color: white;
 }
 
 .itemcart_text {
@@ -23,6 +18,7 @@ body {
     top: 30px;
 
 }
+
 
 .main_cartdiv {
     position: relative;
@@ -32,6 +28,30 @@ body {
     border: 1px solid gray;
 
 
+}
+
+.data_title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.data_product {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.data_text {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.data_item {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hr {
@@ -48,35 +68,39 @@ body {
 
 }
 
-.item_span {
-    width: 300px;
-    height: 80px;
-    border-radius: 80px;
-    background-color: transparent;
-    color: teal;
-    border: 2px solid gray;
-    opacity: 0.9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-
+.Trending_heading {
+    font-size: 36px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 
-.item_span:hover {
-    background-color: blue;
-    color: white;
-
+.trending_text {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
 }
+
+
 
 .text_btn {
     cursor: pointer;
 }
 
+.addCartprice {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 16px #0000003b;
+    width: 300px;
+    height: 100px;
+
+
+}
+
 @media screen and (max-width:545px) {
     .img_responsive {
-        width: 300px;
+        width: 270px;
         height: 200px;
         margin: 10px;
     }
@@ -87,5 +111,38 @@ body {
 
     .hr {
         width: 300px;
+    }
+
+    .responsive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+
+    .pricecart_responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media screen and (min-width:546px) and (max-width:769px) {
+    .img_responsive {
+        width: 600px;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .pricecart_responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 }

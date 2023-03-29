@@ -1,27 +1,20 @@
-
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import Header from '../component/Navbar';
+
 // import { NavLink, useNavigate } from "react-router-dom"
 // import { ToastContainer, toast } from 'react-toastify';
 import "./Login.css"
-
-
 const Login = () => {
 
     const [passShow, setPassShow] = useState(false);
-
     const [inpval, setInpval] = useState({
         email: "",
         password: "",
     });
-
     // const navigate = useNavigate();
-
     const setVal = (e) => {
         // console.log(e.target.value);
         const { name, value } = e.target;
-
         setInpval(() => {
             return {
                 ...inpval,
@@ -29,13 +22,8 @@ const Login = () => {
             }
         })
     };
-
-
-
-
     return (
         <>
-            <Header />
             <section>
                 <div className="form_data">
                     <div className="form_heading">
@@ -58,9 +46,9 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <button className='btn'>Login</button>
+                        <button className='btn_login'>Login</button>
                         <p>Don't have an Account? <Link to="/signup">Sign Up </Link> </p>
-                        {/* <ToastContainer /> */}
+
                     </form>
 
                 </div>

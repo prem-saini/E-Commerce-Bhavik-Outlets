@@ -81,7 +81,7 @@ section .form_data {
     cursor: pointer;
 }
 
-form .btn {
+form .btn_login {
     display: block;
     width: 100%;
     padding: 15px;
