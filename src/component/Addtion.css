@@ -54,6 +54,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* -------------*******all Treading -------------- */
+
 .hr {
     width: 400px;
     border: 3px solid gray;
@@ -96,6 +98,58 @@
     height: 100px;
 
 
+}
+
+/* -------------*******all Product -------------- */
+.product_heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: blue;
+}
+
+.btn_addItem {
+    width: 100px;
+    height: 30px;
+    border: transparent;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.card_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card_style {
+    background-color: #414141;
+    width: 18rem;
+    height: 26rem;
+}
+
+.card-text {
+    color: #ffb145;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search_input {
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+.seacrh_btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: green;
+    color: white;
 }
 
 @media screen and (max-width:545px) {

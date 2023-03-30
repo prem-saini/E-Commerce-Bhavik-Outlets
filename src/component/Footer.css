@@ -40,10 +40,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     .footer {
         background-color: #CAD4DB;
-        height: 100vh;
+        height: 140vh;
         padding: 10px;
     }
 
