@@ -1,6 +1,6 @@
 import React, { useState } from "react"
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import Header from "../component/Navbar";
 import "./Login.css"
 
 function Signup() {
@@ -11,10 +11,8 @@ function Signup() {
         password: "",
     });
 
-    // const navigate = useNavigate();
-
     const setVal = (e) => {
-        // console.log(e.target.value);
+
         const { name, value } = e.target;
 
         setInpval(() => {
@@ -27,6 +25,14 @@ function Signup() {
 
     return (
         <>
+            <div>
+                <Helmet>
+                    <title>MY SIGN UP PAGE || Bhavik Outlets</title>
+                    <meta name="description" content="My Page Description" />
+                    <meta name="keywords" content="My, Page, Keywords" />
+                </Helmet>
+
+            </div>
 
             <section>
                 <div className="form_data">

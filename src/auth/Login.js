@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-
-// import { NavLink, useNavigate } from "react-router-dom"
-// import { ToastContainer, toast } from 'react-toastify';
 import "./Login.css"
 const Login = () => {
 
@@ -11,9 +9,9 @@ const Login = () => {
         email: "",
         password: "",
     });
-    // const navigate = useNavigate();
+
     const setVal = (e) => {
-        // console.log(e.target.value);
+
         const { name, value } = e.target;
         setInpval(() => {
             return {
@@ -24,6 +22,14 @@ const Login = () => {
     };
     return (
         <>
+            <div>
+                <Helmet>
+                    <title>MY LOGIN PAGE || Bhavik Outlets</title>
+                    <meta name="description" content="My Page Description" />
+                    <meta name="keywords" content="My, Page, Keywords" />
+                </Helmet>
+
+            </div>
             <section>
                 <div className="form_data">
                     <div className="form_heading">
@@ -33,11 +39,11 @@ const Login = () => {
 
                     <form>
                         <div className="form_input">
-                            <label htmlFor="email">Email</label>
+                            <label>Email</label>
                             <input type="email" value={inpval.email} onChange={setVal} name="email" id="email" placeholder='Enter Your Email Address' />
                         </div>
                         <div className="form_input">
-                            <label htmlFor="password">Password</label>
+                            <label>Password</label>
                             <div className="two">
                                 <input type={!passShow ? "password" : "text"} onChange={setVal} value={inpval.password} name="password" id="password" placeholder='Enter Your password' />
                                 <div className="showpass" onClick={() => setPassShow(!passShow)}>

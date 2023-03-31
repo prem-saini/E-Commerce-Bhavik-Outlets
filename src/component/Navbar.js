@@ -11,7 +11,6 @@ function Header() {
 
     const [show, setShow] = useState(false)
     const getdata = useSelector((state) => state.cartreducer.carts)
-    // console.log(getdata, "gggg")
 
     return (
         <>

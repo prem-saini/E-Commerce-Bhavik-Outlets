@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import Header from "./Navbar"
 import { ADD, REMOVE, DLT } from "../actions/Action";
 import "./Addtion.css"
 import del from "../Image/delete.png"
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function AddToCart() {
 
     const [price, setPrice] = useState(0)
     const Addto = useSelector((state) => state.cartreducer.carts)
     const Addlength = Addto?.Addlength
-    // console.log(Addlength, "opl")
-    // console.log(Addto, "mok")
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -23,7 +21,6 @@ function AddToCart() {
         } else {
 
         }
-        // console.log(dlt, "prem")
 
     }
 
@@ -31,7 +28,6 @@ function AddToCart() {
     const Add = (e) => {
 
         dispatch(ADD(e));
-        console.log(Add, "prem")
 
     }
 
@@ -52,6 +48,14 @@ function AddToCart() {
     }, [total])
     return (
         <>
+            <div>
+                <Helmet>
+                    <title>MY ADD TO CART PAGE || Bhavik Outlets</title>
+                    <meta name="description" content="My Page Description" />
+                    <meta name="keywords" content="My, Page, Keywords" />
+                </Helmet>
+
+            </div>
             <div className="d-flex justify-content-between pricecart_responsive">
                 <div className="container-fluid d-flex flex-column p-2">
                     {Addto &&
@@ -100,7 +104,6 @@ function AddToCart() {
                         <button className="btn btn-success">Buy Now</button></div>
                 </div>
             </div>
-            {/* <hr /> */}
 
 
         </>

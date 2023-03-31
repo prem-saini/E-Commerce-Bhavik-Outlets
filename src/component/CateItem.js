@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "./CateItem.css"
-
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
-// import "./styles.css";
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay } from 'swiper';
 
 function CateItem() {
     const navigate = useNavigate()
     const [item, setItem] = useState()
     const [type, setType] = useState([])
 
-    // console.log(item, "ss")
 
-    // console.log(type, "type")
 
     const getCate = async (id) => {
         await fetch("https://dummyjson.com/products/categories", {
@@ -29,7 +22,7 @@ function CateItem() {
 
             .then((res) => {
                 setItem(res)
-                console.log(res)
+
 
             })
     }

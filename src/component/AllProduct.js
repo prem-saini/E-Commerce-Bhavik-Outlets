@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from "react"
-
-import Header from "./Navbar"
 import { useDispatch } from "react-redux"
 import { ADD } from "../actions/Action"
+import { Helmet } from "react-helmet"
 
 function AllProduct() {
     const [response, setResponse] = useState()
     const [search, setSearch] = useState()
     const [result, setResult] = useState()
-    // console.log(result, "hhh")
 
     const dispatch = useDispatch()
 
     const senddata = (val) => {
-        // console.log(val, "jjjjj")
+
         dispatch(ADD(val))
 
     }
 
     const getProduct = async (id) => {
-        // e.preventDefault();
+
 
         await fetch("https://dummyjson.com/products/", {
             method: "GET",
@@ -27,7 +25,7 @@ function AllProduct() {
             .then((res) => res.json())
             .then((res) => {
                 setResponse(res?.products)
-                // console.log(res)
+
             })
     }
     useEffect(() => {
@@ -47,6 +45,15 @@ function AllProduct() {
     }
     return (
         <>
+
+            <div>
+                <Helmet>
+                    <title>MY ALL PRODUCT PAGE || Bhavik Outlets</title>
+                    <meta name="description" content="My Page Description" />
+                    <meta name="keywords" content="My, Page, Keywords" />
+                </Helmet>
+
+            </div>
             <div className="mx-3 d-flex justify-content-between flex-wrap">
                 <p className="product_heading">ALL PRODUCTS</p>
                 <div >
@@ -81,12 +88,6 @@ function AllProduct() {
                     })
                 }
             </div>
-
-
-
-
-
-
             <div className="d-flex justify-content-between flex-wrap p-2">
                 {
                     response?.map((value) => {

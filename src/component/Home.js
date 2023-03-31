@@ -8,15 +8,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-// import "./styles.css";
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import CateItem from "./CateItem"
 import Addtion from "./Addtion"
+import { Helmet } from "react-helmet"
 
 
 function Home() {
     return (
         <>
+
+            <div>
+                <Helmet>
+                    <title>MY HOME PAGE || Bhavik Outlets</title>
+                    <meta name="description" content="My Page Description" />
+                    <meta name="keywords" content="My, Page, Keywords" />
+                </Helmet>
+
+            </div>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}

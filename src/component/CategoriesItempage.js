@@ -1,15 +1,23 @@
 import React, { useState } from "react"
+import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function CategoriesItempage(props) {
     const location = useLocation();
     const [star, setStar] = useState(location.state?.data)
-    // console.log(location.state?.data, "props")
-    // console.log(stat, "love")
+
 
     return (
         <>
+            <div>
+                <Helmet>
+                    <title>MY CATEGORIES PAGE || Bhavik Outlets</title>
+                    <meta name="description" content="My Page Description" />
+                    <meta name="keywords" content="My, Page, Keywords" />
+                </Helmet>
+
+            </div>
             <div className="d-flex justify-content-between flex-wrap p-2">
                 {star &&
                     star?.map((value) => {
