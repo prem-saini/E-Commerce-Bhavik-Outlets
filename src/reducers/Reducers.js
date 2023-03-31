@@ -1,6 +1,6 @@
 import { ADD_CART, REMOVE_ALL, REMOVE_SINGLE } from "../constant/Constant";
 const INIT_STATE = {
-    carts: []
+    carts: localStorage.getItem("datatokan",) ? JSON.parse(localStorage.getItem("datatokan")) : []
 };
 // console.log(INIT_STATE.carts, "sa")
 export const cartreducer = (state = INIT_STATE, action) => {
@@ -8,7 +8,7 @@ export const cartreducer = (state = INIT_STATE, action) => {
         case ADD_CART:
 
             const IteamIndex = state.carts.findIndex((iteam) => iteam.id === action.payload.id);
-
+            localStorage.setItem("datatokan", JSON.stringify(state.carts))
             if (IteamIndex >= 0) {
                 state.carts[IteamIndex].qnty += 1
                 return {
@@ -23,6 +23,8 @@ export const cartreducer = (state = INIT_STATE, action) => {
                 }
 
             }
+
+
 
         case REMOVE_ALL:
             const data = state.carts.filter((el) => el.id !== action.payload)
