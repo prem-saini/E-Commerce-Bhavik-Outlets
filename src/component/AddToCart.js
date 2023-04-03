@@ -10,18 +10,12 @@ function AddToCart() {
 
     const [price, setPrice] = useState(0)
     const Addto = useSelector((state) => state.cartreducer.carts)
-    const Addlength = Addto?.Addlength
+    const Addlength = Addto?.length
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
     const dlt = (id) => {
         dispatch(DLT(id))
-        if (!Addlength) {
-            navigate('/')
-        } else {
-
-        }
-
     }
 
 
@@ -42,6 +36,12 @@ function AddToCart() {
         })
         setPrice(price)
     };
+
+    useEffect(() => {
+        if (Addlength === 0) {
+            navigate('/')
+        }
+    }, [Addlength])
 
     useEffect(() => {
         total();
