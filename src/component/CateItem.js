@@ -5,7 +5,8 @@ import "swiper/css";
 import "./CateItem.css"
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Oval } from "react-loader-spinner";
 
 function CateItem() {
     const navigate = useNavigate()
@@ -45,64 +46,81 @@ function CateItem() {
     }
 
     return (
-        <>
-            <div className="text-center">
-                <span className="Categories_heading">Categories</span>
-            </div>
-            <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                centeredSlides={true}
-
-                loop={true}
-                rewind={true}
-                breakpoints={{
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                }}
-                autoplay={{
-                    delay: 1000,
-                    disableOnInteraction: false,
-
-                }}
-                modules={[
-                    Autoplay
-
-                ]} className="mySwiper mt-5"
+        <> {
+            !item ? <span className="d-flex justify-content-center"> <Oval
+                height={50}
+                width={50}
+                color="#4fa94d"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel='oval-loading'
+                secondaryColor="#4fa94d"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
 
 
-            >
-
-                <div className="container-fluid">
-                    {
-                        item?.map((value, index) => {
-                            return (
-                                <>
-                                    <div className="container d-flex justify-content-between flex-wrap p-5 bg-white ">
-                                        <SwiperSlide >
-                                            <div className="item_span" onClick={() => getsingleProduct(value)}>{value}</div>
-                                        </SwiperSlide>
-                                    </div>
-
-
-                                </>
-                            )
-                        })
-                    }
-
+            /> </span> : <>
+                <div className="text-center">
+                    <span className="Categories_heading">Categories</span>
                 </div>
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={10}
+                    centeredSlides={true}
 
-            </Swiper>
+                    loop={true}
+                    rewind={true}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }}
+                    autoplay={{
+                        delay: 1000,
+                        disableOnInteraction: false,
+
+                    }}
+                    modules={[
+                        Autoplay, Pagination, Navigation
+
+                    ]} className="mySwiper mt-5"
+
+
+                >
+
+                    <div className="container-fluid">
+                        {
+                            item?.map((value, index) => {
+                                return (
+                                    <>
+                                        <div className="container d-flex justify-content-between flex-wrap p-5 bg-white ">
+                                            <SwiperSlide >
+                                                <div className="item_span" onClick={() => getsingleProduct(value)}>{value}</div>
+                                            </SwiperSlide>
+                                        </div>
+
+
+                                    </>
+                                )
+                            })
+                        }
+
+                    </div>
+
+                </Swiper>
+            </>
+        }
+
 
 
 
