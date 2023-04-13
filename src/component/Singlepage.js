@@ -25,7 +25,7 @@ function Singlepage() {
             })
     }
     useEffect(() => {
-        getSingleProduct()
+        getSingleProduct();
     }, [])
     return (
         <>

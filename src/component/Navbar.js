@@ -26,7 +26,7 @@ function Header() {
                             <img src='https://img.icons8.com/ios/50/000000/test-account.png' alt='...' className='cart_icon' onClick={() => setShow(!show)
                             } />
                             <Link to='/addtocart'> <img src={whitecart} alt="..." className='cart_icon' />
-                                <p className="Item">{getdata.length}</p>
+                                <span className="Item">{getdata.length}</span>
 
                             </Link>
 

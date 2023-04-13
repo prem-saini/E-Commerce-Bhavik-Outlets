@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./CateItem.css"
@@ -12,6 +12,7 @@ function CateItem() {
     const navigate = useNavigate()
     const [item, setItem] = useState()
     const [type, setType] = useState([])
+    console.log(type)
 
 
 

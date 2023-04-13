@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet"
 
 function AllProduct() {
     const [response, setResponse] = useState()
+    console.log(response, "plo")
     const [search, setSearch] = useState()
     const [result, setResult] = useState()
 

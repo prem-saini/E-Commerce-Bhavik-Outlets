@@ -46,6 +46,10 @@ function AddToCart() {
     useEffect(() => {
         total();
     }, [total])
+
+    const getCheckOut = () => {
+        navigate("/checkout")
+    }
     return (
         <>
             <div>
@@ -101,7 +105,7 @@ function AddToCart() {
 
                     <span className="mt-3">Total : ${price}</span>
                     <div className="mt-2">
-                        <button className="btn btn-success">Buy Now</button></div>
+                        <button className="btn btn-primary" onClick={() => getCheckOut()}>Buy Now</button></div>
                 </div>
             </div>
 

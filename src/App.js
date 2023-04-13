@@ -9,6 +9,7 @@ import Singlepage from './component/Singlepage';
 import AddToCart from './component/AddToCart';
 import Footer from './component/Footer';
 import Header from './component/Navbar';
+import Checkout from './component/Checkout';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/singlepage/:id" element={<Singlepage />} />
         <Route path='/categoriesitempage' element={<CategoriesItempage />} />
         <Route path='/addtocart' element={<AddToCart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <hr className='hr_line' />
       <Footer />
