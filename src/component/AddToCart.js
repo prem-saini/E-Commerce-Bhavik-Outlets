@@ -10,6 +10,7 @@ function AddToCart() {
 
     const [price, setPrice] = useState(0)
     const Addto = useSelector((state) => state.cartreducer.carts)
+    console.log(Addto, "opl")
     const Addlength = Addto?.length
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ function AddToCart() {
 
 
     const Add = (e) => {
-
+        console.log(e, '646546');
         dispatch(ADD(e));
 
     }

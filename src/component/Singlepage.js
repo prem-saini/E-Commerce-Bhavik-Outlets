@@ -7,11 +7,21 @@ import { Helmet } from "react-helmet"
 
 function Singlepage() {
 
+
+
     const { id } = useParams()
+
     const [single, setSingle] = useState()
+    // console.log(single, "premsaini")
     const dispatch = useDispatch()
     const senddata = (val) => {
         dispatch(ADD(single))
+
+    }
+
+    const Add = (e) => {
+
+        dispatch(ADD(e));
 
     }
     const getSingleProduct = async () => {
@@ -22,11 +32,14 @@ function Singlepage() {
             .then((res) => res.json())
             .then((res) => {
                 setSingle(res)
+                // console.log({ ...res, qnty: 2 }, 'chandra');
             })
     }
     useEffect(() => {
         getSingleProduct();
     }, [])
+
+    // console.log(single, 'single');
     return (
         <>
 
@@ -54,7 +67,20 @@ function Singlepage() {
                                 <p className="singlepage_data">Price:{single?.price}</p>
                                 <p className="singlepage_data">Rating:{single?.rating}</p>
                             </div>
-                            <button className="btn_addtcart" onClick={() => senddata(id)}>ADD TO CART</button>
+                            <div className="">
+                                <p className="singlepage_data">Colors:</p>
+                                <p className="fs-4">🔴  🟠  🟡 🟢  </p>
+
+                            </div>
+                            <div className="d-flex justify-content-evenly align-items-start flex-column">
+                                <div className="">Quantity</div>
+                                <div className="bg-light">
+                                    <span className="fs-5 mx-3 text_btn">-</span>
+                                    <span className="fs-5 mx-3 text_btn">{single?.qnty}</span>
+                                    <span className="fs-5 mx-3 text_btn" onClick={() => Add(single)}>+</span>
+                                </div>
+                            </div>
+                            <button className="btn_addtcart mt-3" onClick={() => senddata(id)}>ADD TO CART</button>
 
 
                         </div>

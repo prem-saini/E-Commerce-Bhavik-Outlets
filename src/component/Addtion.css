@@ -108,6 +108,17 @@
     color: blue;
 }
 
+.card_style:hover img {
+
+    transform: scaleY(0.5);
+    /* transform: rotate(1deg); */
+    /* transform-origin: 2% 2% 2% 2%; */
+}
+
+.card_style1:hover img {
+    transform: scaleY(0.5);
+}
+
 .btn_addItem {
     width: 100px;
     height: 30px;
@@ -121,12 +132,24 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: all 1s ease-in-out;
+
 }
 
 .card_style {
     background-color: #414141;
     width: 18rem;
     height: 26rem;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.card_style1 {
+    background-color: #414141;
+    width: 18rem;
+    height: 27.5rem;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
 .card-text {
@@ -152,7 +175,16 @@
     color: white;
 }
 
+
+
 @media screen and (max-width:545px) {
+
+    .card_style {
+        background-color: #414141;
+        width: 9rem;
+        height: 26rem;
+    }
+
     .img_responsive {
         width: 270px;
         height: 200px;

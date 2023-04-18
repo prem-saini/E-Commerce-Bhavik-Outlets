@@ -1,5 +1,6 @@
 import React from "react"
 import Treading from "../Treading"
+import { Link } from "react-router-dom"
 
 function TreadingProduct() {
     return (
@@ -21,7 +22,7 @@ function TreadingProduct() {
                                 <>
                                     <div className="d-flex  flex-column trending_cart mt-2">
                                         <div className="">
-                                            <img src={element.imgdata} alt="..." />
+                                            <Link to={`/singlepage/${element?.id}`}><img src={element.imgdata} alt="..." /></Link>
                                         </div>
                                         <div className="p-3">
                                             <p className="fs-6 fw-semibold">{element.title}</p>

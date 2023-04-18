@@ -24,7 +24,7 @@ function CategoriesItempage(props) {
                         return (
                             <>
                                 <div className="Card_main">
-                                    <div class="card card_style" style={{ width: "18rem" }}>
+                                    <div class="card card_style1" style={{ width: "18rem" }}>
                                         <Link to={`/singlepage/${value?.id}`}> <img src={value?.thumbnail
                                         } alt="..." className="card_img" /></Link>
                                         <div class="card-body">
@@ -37,7 +37,10 @@ function CategoriesItempage(props) {
                                                 <p className="card-text">Rating:{value?.rating}</p>
                                                 <p className="card-text">Stock: {value?.stock}</p>
                                             </div>
+
+                                            <Link to={`/singlepage/${value?.id}`}><button className="btn btn-secondary">ADD ITEM</button> </Link>
                                         </div>
+
                                     </div>
                                 </div>
                             </>

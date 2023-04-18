@@ -4,7 +4,7 @@ import banner1 from "../Image/productbanner-1.jpg"
 import banner2 from "../Image/productbanner-2.jpg"
 import "./Addtion.css"
 import TreadingProduct from "./TreadingProduct"
-
+import { Link } from "react-router-dom"
 function Addtion() {
     return (
         <>
@@ -17,7 +17,7 @@ function Addtion() {
                                 <>
                                     <div className="d-flex flex-column justify-content-center align-items-center mt-3">
                                         <div className="cart_func">
-                                            <img src={item.imgdata} alt="..." className="mt-3" />
+                                            <Link to={`/singlepage/${item?.id}`}><img src={item.imgdata} alt="..." className="mt-3" /></Link>
                                         </div>
                                         <div className="text-center">
                                             <p className="data_title">{item.title}</p>

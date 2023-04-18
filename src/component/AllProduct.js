@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { ADD } from "../actions/Action"
 import { Helmet } from "react-helmet"
+import { fetchProducts } from "../actions/ProductAction"
 
 function AllProduct() {
-    const [response, setResponse] = useState()
-    console.log(response, "plo")
+    const AllProduct = useSelector((state) => state?.app)
     const [search, setSearch] = useState()
     const [result, setResult] = useState()
 
@@ -16,22 +16,10 @@ function AllProduct() {
         dispatch(ADD(val))
 
     }
-
-    const getProduct = async (id) => {
-
-
-        await fetch("https://dummyjson.com/products/", {
-            method: "GET",
-        })
-            .then((res) => res.json())
-            .then((res) => {
-                setResponse(res?.products)
-
-            })
-    }
     useEffect(() => {
-        getProduct()
+        dispatch(fetchProducts())
     }, [])
+    // console.log(fetchProducts, "pto")
 
     const onSearch = async () => {
 
@@ -91,7 +79,7 @@ function AllProduct() {
             </div>
             <div className="d-flex justify-content-between flex-wrap p-2">
                 {
-                    response?.map((value) => {
+                    AllProduct?.products?.map((value) => {
                         return (
                             <>
 

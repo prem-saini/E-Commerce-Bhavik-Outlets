@@ -6,7 +6,7 @@ const INIT_STATE = {
 export const cartreducer = (state = INIT_STATE, action) => {
     switch (action.type) {
         case ADD_CART:
-
+            console.log(action.payload, "99999");
             const IteamIndex = state.carts.findIndex((iteam) => iteam.id === action.payload.id);
             localStorage.setItem("datatokan", JSON.stringify(state.carts))
             if (IteamIndex >= 0) {

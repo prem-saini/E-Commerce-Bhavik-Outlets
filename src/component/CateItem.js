@@ -7,29 +7,34 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Oval } from "react-loader-spinner";
+import { CategoriesProducts } from "../actions/ProductAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function CateItem() {
+    const AllCategories = useSelector((state) => state?.app)
+    console.log(AllCategories, "prem sainii")
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const [item, setItem] = useState()
     const [type, setType] = useState([])
     console.log(type)
 
 
 
-    const getCate = async (id) => {
-        await fetch("https://dummyjson.com/products/categories", {
-            method: "GET",
-        })
-            .then((res) => res.json())
+    // const getCate = async (id) => {
+    //     await fetch("https://dummyjson.com/products/categories", {
+    //         method: "GET",
+    //     })
+    //         .then((res) => res.json())
 
-            .then((res) => {
-                setItem(res)
+    //         .then((res) => {
+    //             setItem(res)
 
 
-            })
-    }
+    //         })
+    // }
     useEffect(() => {
-        getCate()
+        dispatch(CategoriesProducts())
     }, [])
 
     const getsingleProduct = async (id) => {
@@ -48,7 +53,7 @@ function CateItem() {
 
     return (
         <> {
-            !item ? <span className="d-flex justify-content-center"> <Oval
+            !AllCategories ? <span className="d-flex justify-content-center"> <Oval
                 height={50}
                 width={50}
                 color="#4fa94d"
@@ -101,7 +106,7 @@ function CateItem() {
 
                     <div className="container-fluid">
                         {
-                            item?.map((value, index) => {
+                            AllCategories?.products?.map((value, index) => {
                                 return (
                                     <>
                                         <div className="container d-flex justify-content-between flex-wrap p-5 bg-white ">
