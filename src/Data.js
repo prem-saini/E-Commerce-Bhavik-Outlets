@@ -15,7 +15,7 @@ const Data = [
     },
     {
         id: '3',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/category/product-cat-3.png',
+        imgdata: "https://weblearnbd.net/tphtml/shofy/assets/img/product/category/product-cat-3.png",
         title: 'CPU Heat Pipes',
         product: '57 Product'
 

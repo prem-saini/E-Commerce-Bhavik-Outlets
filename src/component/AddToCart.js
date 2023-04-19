@@ -10,7 +10,7 @@ function AddToCart() {
 
     const [price, setPrice] = useState(0)
     const Addto = useSelector((state) => state.cartreducer.carts)
-    console.log(Addto, "opl")
+    // console.log(Addto, "opl")
     const Addlength = Addto?.length
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -21,14 +21,14 @@ function AddToCart() {
 
 
     const Add = (e) => {
-        console.log(e, '646546');
+        // console.log(e, '646546');
         dispatch(ADD(e));
 
     }
 
     const remove = (value) => {
         dispatch(REMOVE(value))
-        console.log(remove, "ppp")
+        // console.log(remove, "ppp")
     }
     const total = () => {
         let price = 0;

@@ -1,11 +1,16 @@
 import React, { useState } from "react"
 import { Helmet } from "react-helmet";
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function CategoriesItempage(props) {
+
     const location = useLocation();
-    const [star, setStar] = useState(location.state?.data)
+    const stare = useSelector(state => state.app)
+    console.log(stare, "opp")
+    // const [star, setStar] = useState(location.state?.data)
+    // console.log(star, "sta")
 
 
     return (
@@ -19,13 +24,14 @@ function CategoriesItempage(props) {
 
             </div>
             <div className="d-flex justify-content-between flex-wrap p-2">
-                {star &&
-                    star?.map((value) => {
+                {stare?.products?.products
+                    &&
+                    stare?.products?.products.map((value) => {
                         return (
                             <>
                                 <div className="Card_main">
                                     <div class="card card_style1" style={{ width: "18rem" }}>
-                                        <Link to={`/singlepage/${value?.id}`}> <img src={value?.thumbnail
+                                        <Link to={`/singlepage/${value?.id}`} state={value}> <img src={value?.thumbnail
                                         } alt="..." className="card_img" /></Link>
                                         <div class="card-body">
                                             <p className="card-text">{value?.category}</p>
@@ -38,7 +44,7 @@ function CategoriesItempage(props) {
                                                 <p className="card-text">Stock: {value?.stock}</p>
                                             </div>
 
-                                            <Link to={`/singlepage/${value?.id}`}><button className="btn btn-secondary">ADD ITEM</button> </Link>
+
                                         </div>
 
                                     </div>
@@ -48,6 +54,8 @@ function CategoriesItempage(props) {
                     })
                 }
             </div>
+
+
 
 
 

@@ -7,48 +7,26 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Oval } from "react-loader-spinner";
-import { CategoriesProducts } from "../actions/ProductAction";
+import { CategoriesProducts, SingleCategoriesProducts } from "../actions/ProductAction";
 import { useDispatch, useSelector } from "react-redux";
 
 function CateItem() {
     const AllCategories = useSelector((state) => state?.app)
-    console.log(AllCategories, "prem sainii")
+    console.log(AllCategories, "fok")
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const [item, setItem] = useState()
     const [type, setType] = useState([])
     console.log(type)
 
-
-
-    // const getCate = async (id) => {
-    //     await fetch("https://dummyjson.com/products/categories", {
-    //         method: "GET",
-    //     })
-    //         .then((res) => res.json())
-
-    //         .then((res) => {
-    //             setItem(res)
-
-
-    //         })
-    // }
     useEffect(() => {
         dispatch(CategoriesProducts())
     }, [])
 
-    const getsingleProduct = async (id) => {
-        await fetch(`https://dummyjson.com/products/category/${id}`, {
-            method: "GET",
-        })
-            .then((res) => res.json())
+    const getsingleProduct = (id) => {
 
-            .then((res) => {
-                setType(res?.products)
-                console.log(res, "joy")
-                navigate("/categoriesitempage", { state: { id: 1, data: res.products } })
+        dispatch(SingleCategoriesProducts(id))
+        navigate("/categoriesitempage", { state: { id: 1, data: SingleCategoriesProducts.products } })
 
-            })
     }
 
     return (
@@ -99,10 +77,7 @@ function CateItem() {
                     modules={[
                         Autoplay, Pagination, Navigation
 
-                    ]} className="mySwiper mt-5"
-
-
-                >
+                    ]} className="mySwiper mt-5">
 
                     <div className="container-fluid">
                         {

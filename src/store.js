@@ -6,7 +6,7 @@ import { productsReducer } from "./reducers/ProductsReducer";
 const store = createStore(
     rootreducer,
     applyMiddleware(thunk),
-    // productsReducer
+
 );
 
 export default store;

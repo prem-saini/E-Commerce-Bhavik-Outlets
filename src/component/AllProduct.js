@@ -10,17 +10,12 @@ function AllProduct() {
     const [result, setResult] = useState()
 
     const dispatch = useDispatch()
-
     const senddata = (val) => {
-
         dispatch(ADD(val))
-
     }
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])
-    // console.log(fetchProducts, "pto")
-
     const onSearch = async () => {
 
         await fetch(`https://dummyjson.com/products/search?q=${search}`, {
@@ -78,7 +73,7 @@ function AllProduct() {
                 }
             </div>
             <div className="d-flex justify-content-between flex-wrap p-2">
-                {
+                {AllProduct?.products &&
                     AllProduct?.products?.map((value) => {
                         return (
                             <>

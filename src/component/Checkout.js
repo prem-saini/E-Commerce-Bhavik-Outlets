@@ -20,6 +20,7 @@ function Checkout() {
     }, [total])
 
     const getPayment = () => {
+        alert("Your Order book Successfully ")
         navigate("/")
     }
     return (
@@ -28,15 +29,15 @@ function Checkout() {
             <div class="container container12 bg-light d-md-flex align-items-center">
                 <div class="card box1 shadow-sm p-md-5 p-md-5 p-4">
                     <div class="fw-bolder mb-4">
-                        {/* <span class="fas fa-dollar-sign"></span> */}
+
                         <span class="ps-1">$-{totalprice}</span>
                     </div>
                     <div class="d-flex flex-column">
                         <div class="d-flex align-items-center justify-content-between text">
                             <span class="">Commission</span>
-                            {/* <span class="fas fa-dollar-sign"> */}
+
                             <span class="ps-1">$-1.99</span>
-                            {/* </span> */}
+
                         </div>
                         <div class="d-flex align-items-center justify-content-between text mb-4">
                             <span>Total</span>
@@ -60,9 +61,7 @@ function Checkout() {
                                 <span>Customer Support:</span>
                                 <span>online chat 24/7</span>
                             </div>
-                            {/* <div class="btn btn-primary rounded-circle">
-                                <span class="fas fa-comment-alt">
-                                </span></div> */}
+
                         </div>
                     </div>
                 </div>
@@ -75,8 +74,7 @@ function Checkout() {
                     </div>
                     <ul class="nav nav-tabs mb-3 px-md-4 px-2">
                         <li class="nav-item"> <a class="nav-link px-2 active" aria-current="page" href="#">Credit Card</a> </li>
-                        {/* <li class="nav-item"> <a class="nav-link px-2" href="#">Mobile Payment</a> </li>
-                        <li class="nav-item ms-auto"> <a class="nav-link px-2" href="#">+ More</a> </li> */}
+
                     </ul>
 
                     <form action="">

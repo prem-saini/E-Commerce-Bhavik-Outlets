@@ -109,10 +109,7 @@
 }
 
 .card_style:hover img {
-
     transform: scaleY(0.5);
-    /* transform: rotate(1deg); */
-    /* transform-origin: 2% 2% 2% 2%; */
 }
 
 .card_style1:hover img {
