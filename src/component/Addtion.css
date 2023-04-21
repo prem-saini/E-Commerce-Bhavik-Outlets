@@ -192,6 +192,7 @@
     transform-style: preserve-3d;
     transform: perspective(2000px);
     transition: 1s;
+    border: transparent;
     box-shadow: inset 100px 0 50px rgba(0, 0, 0, 0.5);
 }
 

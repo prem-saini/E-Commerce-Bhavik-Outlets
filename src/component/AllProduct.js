@@ -12,12 +12,23 @@ function AllProduct() {
     const [result, setResult] = useState()
 
     const dispatch = useDispatch()
+
     const senddata = (val) => {
 
+
+        toast.success("Your item Add Successfully !", {
+            position: toast.POSITION.TOP_LEFT,
+            autoClose: 2000,
+
+        });
+        setTimeout(() => {
+
+        }, 2000);
         dispatch(ADD(val))
     }
     useEffect(() => {
         dispatch(fetchProducts())
+
 
 
     }, [])
@@ -29,6 +40,15 @@ function AllProduct() {
             .then((res) => res.json())
             .then((res) => {
                 setResult(res?.products)
+
+                toast.success("Your item search Successfully !", {
+                    position: toast.POSITION.TOP_LEFT,
+                    autoClose: 2000,
+
+                });
+                setTimeout(() => {
+
+                }, 2000);
 
             })
     }
@@ -69,7 +89,7 @@ function AllProduct() {
                                         </div>
 
                                         <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
-                                        <ToastContainer />
+
                                     </div>
                                 </div>
 
@@ -121,7 +141,7 @@ function AllProduct() {
             </div>
 
 
-
+            <ToastContainer />
 
         </>
     )

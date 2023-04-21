@@ -5,6 +5,7 @@ import "./Addtion.css"
 import del from "../Image/delete.png"
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { toast, ToastContainer } from "react-toastify";
 
 function AddToCart() {
 
@@ -16,6 +17,15 @@ function AddToCart() {
     const navigate = useNavigate()
 
     const dlt = (id) => {
+
+        toast.success("Your item delete Successfully !", {
+            position: toast.POSITION.TOP_LEFT,
+            autoClose: 2000,
+
+        });
+        setTimeout(() => {
+
+        }, 2000);
         dispatch(DLT(id))
     }
 
@@ -68,11 +78,12 @@ function AddToCart() {
                             return (
                                 <>
                                     <div className="Card_main d-flex container p-2">
+
                                         <div className="card col-lg-6">
                                             <img src={value?.thumbnail} alt="..." className="singlepage_img" />
                                         </div>
                                         <div>
-                                            <div className="card-body  mt-2 col-lg-7" style={{ marginLeft: '150px' }}>
+                                            <div className="card-body  mt-2 col-lg-6" style={{ marginLeft: '150px' }}>
                                                 <p className="singlepage_data">{value?.title}</p>
                                                 <p className="siglepage_des">{value?.description}</p>
                                                 <div className="d-flex justify-content-between">
@@ -96,6 +107,8 @@ function AddToCart() {
                                             </div>
                                         </div>
                                     </div>
+                                    <ToastContainer />
+
                                 </>
                             )
                         })

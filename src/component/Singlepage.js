@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux"
 import { ADD } from "../actions/Action"
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
+import { toast, ToastContainer } from "react-toastify"
 
 function Singlepage() {
 
@@ -14,9 +15,18 @@ function Singlepage() {
     const { id } = useParams()
     const dispatch = useDispatch()
     const senddata = () => {
+
+        toast.success("Your item Add Successfully !", {
+            position: toast.POSITION.TOP_LEFT,
+            autoClose: 2000,
+
+        });
+        setTimeout(() => {
+
+        }, 2000);
         dispatch(ADD(location.state))
     }
-    console.log(location.state, "prem");
+    // console.log(location.state, "prem");
 
     return (
         <>
@@ -65,7 +75,7 @@ function Singlepage() {
                     </div>
                 </div>
             </div>
-
+            <ToastContainer />
         </>
     )
 }

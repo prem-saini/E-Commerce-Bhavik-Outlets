@@ -24,17 +24,6 @@ function Checkout() {
     }, [total])
 
     const getPayment = () => {
-        // toast.success('order Placed Sucessfully !', {
-        //     position: toast.POSITION.TOP_RIGHT
-        // })
-        // navigate("/")
-        // toast.success('Order Placed Sucessfully !', {
-        //     position: toast.POSITION.TOP_RIGHT
-        // });
-
-        // // dispatch(Empty())
-
-
         toast.success("Your order book Successfully !", {
             position: toast.POSITION.TOP_CENTER,
 

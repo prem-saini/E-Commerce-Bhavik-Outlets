@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,11 +12,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 function CateItem() {
     const AllCategories = useSelector((state) => state?.app)
-    console.log(AllCategories, "fok")
+    console.log(AllCategories, "roy")
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const [type, setType] = useState([])
-    console.log(type)
+
 
     useEffect(() => {
         dispatch(CategoriesProducts())
@@ -81,7 +80,7 @@ function CateItem() {
 
                     <div className="container-fluid">
                         {
-                            AllCategories?.products?.map((value, index) => {
+                            [{ AllCategories }]?.products?.map((value) => {
                                 return (
                                     <>
                                         <div className="container d-flex justify-content-between flex-wrap p-5 bg-white ">

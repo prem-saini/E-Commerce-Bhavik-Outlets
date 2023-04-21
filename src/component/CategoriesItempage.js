@@ -8,7 +8,7 @@ function CategoriesItempage(props) {
 
     // const location = useLocation();
     const stare = useSelector(state => state.app)
-    console.log(stare, "opp")
+    // console.log(stare, "opp")
     // const [star, setStar] = useState(location.state?.data)
     // console.log(star, "sta")
 
