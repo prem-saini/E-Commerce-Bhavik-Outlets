@@ -1,7 +1,7 @@
 import axios from "axios";
 import ShopApi from "../Api/ShopApi";
 import { ActionTypes } from "../constant/ActionTypes";
-import { useNavigate, useParams } from "react-router-dom";
+// import { useNavigate, useParams } from "react-router-dom";
 
 
 export const fetchProducts = () => {
@@ -38,13 +38,29 @@ export const SingleCategoriesProducts = (id) => {
             const response = await ShopApi.get(`/products/category/${id}`)
             console.log(response.data, "doke")
             dispatch(apiSingleCate(response.data))
-            // navigate("/categoriesitempage", { state: { id: 1, data: response.data } })
+
         }
         catch {
             console.log(Error)
         }
     }
 }
+// export const SearchProducts = (search) => {
+
+
+//     return async function (dispatch) {
+
+//         try {
+//             const response = await axios.get(`https://dummyjson.com/products/search?q=${search}`)
+//             console.log(response.data, "do")
+//             dispatch(apiSearch(response.data))
+
+//         }
+//         catch {
+//             console.log(Error)
+//         }
+//     }
+// }
 export const SelectedProducts = (product) => {
     return {
         type: ActionTypes.SELECTED_PRODUCT,
@@ -78,3 +94,10 @@ export const apiSingleCate = (data) => {
         payload: data
     }
 }
+// export const apiSearch = (data) => {
+//     console.log(data, "po")
+//     return {
+//         type: "SEARCH_PRODUCT",
+//         payload: data
+//     }
+// }

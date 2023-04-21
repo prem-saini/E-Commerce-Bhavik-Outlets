@@ -61,16 +61,16 @@ function CateItem() {
                             spaceBetween: 10,
                         },
                         768: {
-                            slidesPerView: 2,
-                            spaceBetween: 30,
-                        },
-                        1024: {
                             slidesPerView: 3,
                             spaceBetween: 30,
                         },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
                     }}
                     autoplay={{
-                        delay: 1000,
+                        delay: 2000,
                         disableOnInteraction: false,
 
                     }}

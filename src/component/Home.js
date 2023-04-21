@@ -1,9 +1,9 @@
 import React from "react"
 import "./Home.css"
-import sildeimg from "../Image/sildeimg.jpg"
-import silde2 from "../Image/silde1.jpg"
-import thirdimg from "../Image/silde3.jpg"
-import firstimg1 from "../Image/sildem.jpg"
+// import sildeimg from "../Image/sildeimg.jpg"
+// import silde2 from "../Image/silde1.jpg"
+// import thirdimg from "../Image/silde3.jpg"
+// import firstimg1 from "../Image/sildem.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -12,6 +12,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper';
 import CateItem from "./CateItem"
 import Addtion from "./Addtion"
 import { Helmet } from "react-helmet"
+import Slider from "../Silders"
 
 
 function Home() {
@@ -38,10 +39,24 @@ function Home() {
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper">
-                <SwiperSlide><img src={sildeimg} alt="..." /></SwiperSlide>
-                <SwiperSlide><img src={silde2} alt="..." /></SwiperSlide>
-                <SwiperSlide><img src={thirdimg} alt="..." /></SwiperSlide>
-                <SwiperSlide><img src={firstimg1} alt="..." /></SwiperSlide>
+                <div className="container-fluid">
+                    {
+                        Slider.map((value) => {
+                            return (
+                                <>
+                                    <div className="container">
+                                        <SwiperSlide >
+                                            <img src={value.imges} alt="..." />
+                                        </SwiperSlide>
+                                    </div>
+
+
+                                </>
+                            )
+                        })
+                    }
+
+                </div>
 
             </Swiper>
             <CateItem />

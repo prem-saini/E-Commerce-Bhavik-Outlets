@@ -1,7 +1,16 @@
+import Trading from "./Image/tranding.jpg"
+import Trading2 from "./Image/tranding2.jpg"
+import Trading3 from "./Image/trading3.jpg"
+import Trading4 from "./Image/treading4.jpg"
+import Trading5 from "./Image/trading5.jpg"
+import Trading6 from "./Image/trading6.jpg"
+import Trading7 from "./Image/trading7.jpg"
+import Trading8 from "./Image/trading9.jpg"
+
 const Treading = [
     {
         id: '1',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-1.jpg',
+        imgdata: Trading,
         title: 'Tablet',
         description: 'Galaxy Tab S6 Lite 10.4-inch Android Tablet 128GB.',
         rating: '⭐⭐⭐⭐⭐⭐⭐⭐ (8 Review)',
@@ -10,7 +19,7 @@ const Treading = [
     },
     {
         id: '2',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-2.jpg',
+        imgdata: Trading2,
         title: 'Smart Watch',
         description: 'Tracker with IP67 Waterproof Pedometer Smart watch.',
         rating: '⭐⭐⭐⭐⭐⭐⭐ (7 Review)',
@@ -19,7 +28,7 @@ const Treading = [
     },
     {
         id: '3',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-3.jpg',
+        imgdata: Trading3,
         title: 'Headphone',
         description: 'Cancelling Headphones Wireless.',
         rating: '⭐⭐⭐⭐⭐⭐⭐⭐ (8 Review)',
@@ -29,7 +38,7 @@ const Treading = [
     },
     {
         id: '4',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-4.jpg',
+        imgdata: Trading4,
         title: 'HP Camera',
         description: 'Professional Camera 4K Digital Video Camera.',
         rating: '⭐⭐⭐⭐⭐⭐⭐ (7 Review)',
@@ -38,7 +47,7 @@ const Treading = [
     },
     {
         id: '5',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-5.jpg',
+        imgdata: Trading5,
         title: 'Powerbank',
         description: 'Mini Portable PD 22.5W Fast Charging Powerbank.',
         rating: '⭐⭐⭐⭐⭐⭐⭐ (7 Review)',
@@ -47,7 +56,7 @@ const Treading = [
     },
     {
         id: '6',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-5-1.jpg',
+        imgdata: Trading6,
         title: 'Heat Pipes',
         description: 'CPU Cooler 2 Heat Pipes 12mm 4 Pin PWM RGB for Intel.',
         rating: '⭐⭐⭐⭐⭐ (5 Review)',
@@ -56,7 +65,7 @@ const Treading = [
     },
     {
         id: '7',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-5-2.jpg',
+        imgdata: Trading7,
         title: 'GAMING',
         description: 'Playstation 4 2TB Slim Gaming Console.',
         rating: '⭐⭐⭐⭐⭐⭐ (6 Review)',
@@ -65,7 +74,7 @@ const Treading = [
     },
     {
         id: '8',
-        imgdata: 'https://weblearnbd.net/tphtml/shofy/assets/img/product/product-5-3.jpg',
+        imgdata: Trading8,
         title: 'Backpacks',
         description: 'Mini Portable Mobile Phone Powerbank for iphone.',
         rating: '⭐⭐⭐⭐⭐⭐⭐⭐ (8 Review)',

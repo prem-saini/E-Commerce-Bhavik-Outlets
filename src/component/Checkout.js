@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Checkout.css"
 import { useSelector } from "react-redux"
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function Checkout() {
     const [totalprice, setTotalPrice] = useState(0)
@@ -20,8 +24,28 @@ function Checkout() {
     }, [total])
 
     const getPayment = () => {
-        alert("Your Order book Successfully ")
-        navigate("/")
+        // toast.success('order Placed Sucessfully !', {
+        //     position: toast.POSITION.TOP_RIGHT
+        // })
+        // navigate("/")
+        // toast.success('Order Placed Sucessfully !', {
+        //     position: toast.POSITION.TOP_RIGHT
+        // });
+
+        // // dispatch(Empty())
+
+
+        toast.success("Your order book Successfully !", {
+            position: toast.POSITION.TOP_CENTER,
+
+        });
+        setTimeout(() => {
+            navigate("/");
+        }, 1000)
+
+
+
+
     }
     return (
         <>
@@ -121,9 +145,11 @@ function Checkout() {
                             </div>
                             <div class="col-12 px-md-5 px-4 mt-3">
                                 <div class="btn btn-primary w-100" onClick={() => getPayment()}>Pay ${totalprice}</div>
+                                <ToastContainer />
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
 

@@ -1,12 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import { Helmet } from "react-helmet";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function CategoriesItempage(props) {
 
-    const location = useLocation();
+    // const location = useLocation();
     const stare = useSelector(state => state.app)
     console.log(stare, "opp")
     // const [star, setStar] = useState(location.state?.data)

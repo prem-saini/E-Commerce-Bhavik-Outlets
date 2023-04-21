@@ -15,6 +15,11 @@ export const productsReducer = (state = intialState, action) => {
         case "SELECTED_PRODUCT":
             return { ...state, products: action.payload }
 
+        // case "SEARCH_PRODUCT":
+
+        //     return { ...state, products: action.payload }
+
+
 
         default:
             return state

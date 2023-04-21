@@ -67,12 +67,12 @@ function AddToCart() {
                         Addto?.map((value, index) => {
                             return (
                                 <>
-                                    <div className="Card_main d-flex container">
-                                        <div className="card col-lg-5">
-                                            <img src={value?.thumbnail} alt="..." />
+                                    <div className="Card_main d-flex container p-2">
+                                        <div className="card col-lg-6">
+                                            <img src={value?.thumbnail} alt="..." className="singlepage_img" />
                                         </div>
                                         <div>
-                                            <div className="card-body mx-5 mt-2 col-lg-7">
+                                            <div className="card-body  mt-2 col-lg-7" style={{ marginLeft: '150px' }}>
                                                 <p className="singlepage_data">{value?.title}</p>
                                                 <p className="siglepage_des">{value?.description}</p>
                                                 <div className="d-flex justify-content-between">
@@ -102,7 +102,7 @@ function AddToCart() {
                     }
 
                 </div >
-                <div className="d-flex addCartprice mt-5 me-5 justify-content-between p-3">
+                <div className="d-flex addCartprice mt-5 me-5 justify-content-between align-items-center p-3">
 
                     <span className="mt-3">Total : ${price}</span>
                     <div className="mt-2">

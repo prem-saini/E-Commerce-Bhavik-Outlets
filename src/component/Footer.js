@@ -15,9 +15,9 @@ function Footer() {
                         <p className="footer_dec">We are a collection of all Type Items and high quality products</p>
                         <p className="footer_text text-center">Social Media</p>
                         <div className="d-flex justify-content-center">
-                            <img src={insta} alt="..." />
-                            <img src={face} alt="..." />
-                            <img src={twitter} alt="..." />
+                            <a href="https://instagram.com/bhavik.outlets?igshid=YmMyMTA2M2Y=">  <img src={insta} alt="..." /></a>
+                            <a href="https://www.google.com/"><img src={face} alt="..." /></a>
+                            <a href="https://www.google.com/"><img src={twitter} alt="..." /></a>
                         </div>
                     </div>
                     <div className="mt-3">

@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { ADD } from "../actions/Action"
 import { Helmet } from "react-helmet"
 import { fetchProducts } from "../actions/ProductAction"
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 function AllProduct() {
     const AllProduct = useSelector((state) => state?.app)
@@ -11,10 +13,13 @@ function AllProduct() {
 
     const dispatch = useDispatch()
     const senddata = (val) => {
+
         dispatch(ADD(val))
     }
     useEffect(() => {
         dispatch(fetchProducts())
+
+
     }, [])
     const onSearch = async () => {
 
@@ -64,6 +69,7 @@ function AllProduct() {
                                         </div>
 
                                         <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
+                                        <ToastContainer />
                                     </div>
                                 </div>
 
@@ -78,7 +84,7 @@ function AllProduct() {
                         return (
                             <>
 
-                                <div className="card m-2 card_style">
+                                {/* <div className="card m-2 card_style">
                                     <img src={value?.thumbnail
                                     } alt="..." className="card_img" />
                                     <div className="card-body">
@@ -91,6 +97,21 @@ function AllProduct() {
 
                                         <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
                                     </div>
+                                </div> */}
+
+                                <div class="card">
+                                    <div class="img-container">
+                                        <img src={value?.thumbnail} alt="" />
+                                    </div>
+                                    <div class="card-details">
+                                        <h2 className="card-text">{value?.category}</h2>
+                                        <p className="card-text">{value?.description.substring(0, 50)}</p>
+                                    </div>
+                                    <div className="d-flex justify-content-between">
+                                        <p className="card-text">{value?.title}</p>
+                                        <p className="card-text">Price:{value?.price}</p>
+                                    </div>
+                                    <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
                                 </div>
 
                             </>
