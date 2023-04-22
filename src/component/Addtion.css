@@ -144,7 +144,7 @@
 .card_style1 {
     background-color: #414141;
     width: 18rem;
-    height: 27.5rem;
+    height: 27.5rem !important;
     transition: all 1s ease-in-out;
     cursor: pointer;
 }

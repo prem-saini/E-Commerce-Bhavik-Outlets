@@ -98,7 +98,7 @@ function AllProduct() {
                     })
                 }
             </div>
-            <div className="d-flex justify-content-between flex-wrap p-2">
+            <div className="d-flex justify-content-between flex-wrap p-2 col-12">
                 {AllProduct?.products &&
                     AllProduct?.products?.map((value) => {
                         return (
@@ -118,6 +118,7 @@ function AllProduct() {
                                         <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
                                     </div>
                                 </div> */}
+
 
                                 <div class="card">
                                     <div class="img-container">

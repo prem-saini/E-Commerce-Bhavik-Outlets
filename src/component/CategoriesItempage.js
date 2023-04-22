@@ -1,8 +1,12 @@
 import React from "react"
+import './CateItem.css'
 import { Helmet } from "react-helmet";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 // import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+import { ADD } from "../actions/Action";
 
 function CategoriesItempage(props) {
 
@@ -11,7 +15,21 @@ function CategoriesItempage(props) {
     // console.log(stare, "opp")
     // const [star, setStar] = useState(location.state?.data)
     // console.log(star, "sta")
+    const dispatch = useDispatch()
 
+    const senddata = (val) => {
+
+
+        toast.success("Your item Add Successfully !", {
+            position: toast.POSITION.TOP_LEFT,
+            autoClose: 2000,
+
+        });
+        setTimeout(() => {
+
+        }, 2000);
+        dispatch(ADD(val))
+    }
 
     return (
         <>
@@ -29,8 +47,8 @@ function CategoriesItempage(props) {
                     stare?.products?.products.map((value) => {
                         return (
                             <>
-                                <div className="Card_main">
-                                    <div class="card card_style1" style={{ width: "18rem" }}>
+                                <div className="Card_main ho">
+                                    <div class="card card_style1">
                                         <Link to={`/singlepage/${value?.id}`} state={value}> <img src={value?.thumbnail
                                         } alt="..." className="card_img" /></Link>
                                         <div class="card-body">
@@ -44,11 +62,13 @@ function CategoriesItempage(props) {
                                                 <p className="card-text">Stock: {value?.stock}</p>
                                             </div>
 
-
+                                            <button className="btn_addItem" onClick={() => senddata(value)}>ADD ITEM</button>
                                         </div>
+
 
                                     </div>
                                 </div>
+                                <ToastContainer />
                             </>
                         )
                     })

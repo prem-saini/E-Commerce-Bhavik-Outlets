@@ -80,7 +80,7 @@ function CateItem() {
 
                     <div className="container-fluid">
                         {
-                            [{ AllCategories }]?.products?.map((value) => {
+                            AllCategories?.products?.map((value) => {
                                 return (
                                     <>
                                         <div className="container d-flex justify-content-between flex-wrap p-5 bg-white ">
